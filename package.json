@@ -1,0 +1,42 @@
+{
+  "name": "lotto-checker",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^3.5.0",
+    "koa": "^2.3.0",
+    "koa-proxy": "^0.8.0",
+    "koa-socket": "^4.4.0",
+    "koa-static": "^3.0.0",
+    "pouchdb": "^6.2.0",
+    "pouchdb-server": "^2.3.7",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "react-bootstrap": "^0.31.0",
+    "react-scripts": "1.0.7",
+    "socket.io-client": "^2.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "start:db": "pouchdb-server --dir pouchdb",
+    "start:server": "node .",
+    "start:prod": " concurrently \"npm run start:db\" \"npm run start:server\""
+  },
+  "main": "server",
+  "proxy": {
+    "/*": {
+      "target": "http://localhost:8080/"
+    },
+    "/socket.io/*": {
+      "target": "http://localhost:8080/",
+      "ws": true
+    }
+  }  
+}

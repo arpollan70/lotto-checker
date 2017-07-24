@@ -1,0 +1,50 @@
+.week {
+  color: #333;
+  text-align: center;
+}
+
+.numerot {
+  background-color: #ffc71d;
+  color: #333;
+  border-style: solid;
+  border-color: #ffc71d;
+  border-radius: 50%;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  float: left;
+  margin-left: 0.5rem;
+}
+
+.lisanumero {
+  color: #333;
+  border-style: solid;
+  border-color: #ffc71d;
+  border-radius: 50%;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  list-style-type: none;
+  float: left;
+  margin-left: 0.5rem;
+}
+
+.pelaajalla {
+  color: #333;
+  text-align: center;
+  list-style-type: none;
+  float: left;
+  width: 7rem;
+  height: 3rem;
+  margin-left: 0.5rem;
+}
+
+.tilasto {
+  color: #333;
+  text-align: center;
+  float: left;
+  width: 7rem;
+  height: 3rem;
+  margin-left: 0.5rem;
+}
+
